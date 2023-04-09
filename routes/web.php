@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -58,3 +59,10 @@ Route::get('/wildcard/ddd/{id}', function ($id) {
     ddd($id);
     return 'Wildcard no - ' . $id;
 })->where('id', '[0-9]+');
+
+
+// requests and query parameters
+Route::get('/search', function(Request $request) {
+    // dd($request);
+    return $request->name . '  ' . $request->city;
+});
