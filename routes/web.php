@@ -43,6 +43,18 @@ Route::get('/wildcard/{id}', function ($id) {
 
 // wild card endpoint with conditions
 // adding regex will do
+
+// dump and die [dd] -> will return a 500 status as this will stop the code of the request
+// it's not gonna pass anything pass that
 Route::get('/wildcard/{id}', function ($id) {
+    dd($id);
+    return 'Wildcard no - ' . $id;
+})->where('id', '[0-9]+');
+
+// dump die and debug [ddd] -> will return a 200 status as this will stop the code of the request
+// it's not gonna pass anything pass that and also give the debug option
+// the debugger will give the cookies, session values, local storage values, headers and body contents
+Route::get('/wildcard/ddd/{id}', function ($id) {
+    ddd($id);
     return 'Wildcard no - ' . $id;
 })->where('id', '[0-9]+');
