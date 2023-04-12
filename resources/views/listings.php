@@ -1,1 +1,5 @@
-<h1>Listings</h1>
+<h1>
+    <?php
+        echo $heading;
+    ?>
+</h1>

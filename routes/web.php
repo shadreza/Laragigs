@@ -15,7 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('listings');
+    return view('listings', [
+        'heading' => 'Latests Listings'
+    ]);
 });
 
 // basic web routes
