@@ -19,22 +19,24 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
+// API routes basics
+
 // the basic and custom api routes are being made here
-Route::get('/posts', function () {
-    return response()->json([
-        'posts' => [
-            [
-                'title' => 'postOne',
-                'description' => 'this is the first post'
-            ],
-            [
-                'title' => 'postTwo',
-                'description' => 'this is the second post'
-            ],
-            [
-                'title' => 'postThree',
-                'description' => 'this is the third post'
-            ],
-        ]
-    ]);
-});
+// Route::get('/posts', function () {
+//     return response()->json([
+//         'posts' => [
+//             [
+//                 'title' => 'postOne',
+//                 'description' => 'this is the first post'
+//             ],
+//             [
+//                 'title' => 'postTwo',
+//                 'description' => 'this is the second post'
+//             ],
+//             [
+//                 'title' => 'postThree',
+//                 'description' => 'this is the third post'
+//             ],
+//         ]
+//     ]);
+// });
