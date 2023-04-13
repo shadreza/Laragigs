@@ -24,7 +24,7 @@ Route::get('/', function () {
 });
 
 // get single listing
-Route::get('/listing/{id}', function ($id) {
+Route::get('/listings/{id}', function ($id) {
     return view('listing', [
         'listing' => BasicModel::getListById($id)
     ]);
