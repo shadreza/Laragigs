@@ -1,6 +1,7 @@
 @extends('layout')
 
 @section('content')
+    @include('partials._search')
 
     @if ($listing == null)
         <p>No listing found</p>
