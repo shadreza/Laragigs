@@ -23,12 +23,27 @@ Route::get('/', function () {
     ]);
 });
 
-// get single listing
-Route::get('/listings/{id}', function ($id) {
+// // get single listing
+// Route::get('/listings/{id}', function ($id) {
+//     $listing = Listing::find($id);
+//     if($listing) {
+//         return view('listing', [
+//             'listing' => $listing
+//         ]);
+//     } else {
+//         abort('404');
+//     }
+// });
+
+// simple eloquent route model binding
+Route::get('/listings/{listing}', function (Listing $listing) {
     return view('listing', [
-        'listing' => Listing::find($id)
+        'listing' => $listing
     ]);
 });
+
+
+
 
 // basic web routes
 
