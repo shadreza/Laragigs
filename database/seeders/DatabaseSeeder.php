@@ -15,14 +15,16 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
 
-        Listing::create([
-            'title' => 'Laravel Junior Developer',
-            'tags' => 'laravel, js, ts',
-            'company' => 'Azurew Corp',
-            'location' => 'UK',
-            'email' => 'azurew@corp.com',
-            'website' => 'www.azurew.com,',
-            'description' => 'lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem',
-        ]);
+        // Listing::create([
+        //     'title' => 'Laravel Junior Developer',
+        //     'tags' => 'laravel, js, ts',
+        //     'company' => 'Azurew Corp',
+        //     'location' => 'UK',
+        //     'email' => 'azurew@corp.com',
+        //     'website' => 'www.azurew.com,',
+        //     'description' => 'lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem',
+        // ]);
+
+        Listing::factory(6)->create();
     }
 }
