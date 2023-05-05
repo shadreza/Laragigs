@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Models\BasicModel;
+use App\Models\Listing;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,14 +19,14 @@ use App\Models\BasicModel;
 Route::get('/', function () {
     return view('listings', [
         'heading' => 'Latests Listings',
-        'listings' => BasicModel::getAllListings()
+        'listings' => Listing::all()
     ]);
 });
 
 // get single listing
 Route::get('/listings/{id}', function ($id) {
     return view('listing', [
-        'listing' => BasicModel::getListById($id)
+        'listing' => Listing::find($id)
     ]);
 });
 
