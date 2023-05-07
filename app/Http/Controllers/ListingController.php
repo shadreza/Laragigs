@@ -12,9 +12,9 @@ class ListingController extends Controller
     {
         // dd(request('tag'));
         // dd(request()->tag);
-        
+
         return view('listings.index', [
-            'listings' => Listing::latest()->filter(request(['tag']))->get()
+            'listings' => Listing::latest()->filter(request(['tag', 'search']))->get()
         ]);
     }
 
