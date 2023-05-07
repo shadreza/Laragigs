@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ListingController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Models\Listing;
@@ -16,12 +17,7 @@ use App\Models\Listing;
 */
 
 // get all listings
-Route::get('/', function () {
-    return view('listings', [
-        'heading' => 'Latests Listings',
-        'listings' => Listing::all()
-    ]);
-});
+Route::get('/', [ListingController::class, 'index']);
 
 // // get single listing
 // Route::get('/listings/{id}', function ($id) {
@@ -36,11 +32,7 @@ Route::get('/', function () {
 // });
 
 // simple eloquent route model binding
-Route::get('/listings/{listing}', function (Listing $listing) {
-    return view('listing', [
-        'listing' => $listing
-    ]);
-});
+Route::get('/listings/{listing}', [ListingController::class, 'show']);
 
 
 
