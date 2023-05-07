@@ -34,6 +34,18 @@ use App\Models\Listing;
 // get all listings
 Route::get('/', [ListingController::class, 'index']);
 
+// show listing form
+Route::get('/listings/create', [ListingController::class, 'create']);
+
+// simple eloquent route model binding
+// if this route is kept above then /listings/create will be falling for this route and that will go to 404
+Route::get('/listings/{listing}', [ListingController::class, 'show']);
+
+
+
+
+
+
 // // get single listing
 // Route::get('/listings/{id}', function ($id) {
 //     $listing = Listing::find($id);
@@ -46,8 +58,6 @@ Route::get('/', [ListingController::class, 'index']);
 //     }
 // });
 
-// simple eloquent route model binding
-Route::get('/listings/{listing}', [ListingController::class, 'show']);
 
 
 
