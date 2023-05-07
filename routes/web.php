@@ -16,6 +16,21 @@ use App\Models\Listing;
 |
 */
 
+
+
+/*
+|--------------------------------------------------------------------------
+| Naming Convention
+|--------------------------------------------------------------------------
+| index - Show all listings
+| show - Show single listing
+| create - Show form to create new listing
+| store - Store new listing
+| edit - Show form to edit listing
+| update - Update listing
+| destroy - Delete listing
+*/
+
 // get all listings
 Route::get('/', [ListingController::class, 'index']);
 
