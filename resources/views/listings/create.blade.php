@@ -16,6 +16,7 @@
                     >Company Name</label
                 >
                 <input
+                    value="{{ old('company') }}"
                     type="text"
                     class="border border-gray-200 rounded p-2 w-full"
                     name="company"
@@ -32,6 +33,7 @@
                     >Job Title</label
                 >
                 <input
+                    value="{{ old('title') }}"
                     type="text"
                     class="border border-gray-200 rounded p-2 w-full"
                     name="title"
@@ -51,6 +53,7 @@
                     >Job Location</label
                 >
                 <input
+                    value="{{ old('location') }}"
                     type="text"
                     class="border border-gray-200 rounded p-2 w-full"
                     name="location"
@@ -68,6 +71,7 @@
                     >Contact Email</label
                 >
                 <input
+                    value="{{ old('email') }}"
                     type="text"
                     class="border border-gray-200 rounded p-2 w-full"
                     name="email"
@@ -87,6 +91,7 @@
                     Website/Application URL
                 </label>
                 <input
+                    value="{{ old('website') }}"
                     type="text"
                     class="border border-gray-200 rounded p-2 w-full"
                     name="website"
@@ -103,6 +108,7 @@
                     Tags (Comma Separated)
                 </label>
                 <input
+                    value="{{ old('tags') }}"
                     type="text"
                     class="border border-gray-200 rounded p-2 w-full"
                     name="tags"
@@ -120,6 +126,7 @@
                     Company Logo
                 </label>
                 <input
+                    value="{{ old('logo') }}"
                     type="file"
                     class="border border-gray-200 rounded p-2 w-full"
                     name="logo"
