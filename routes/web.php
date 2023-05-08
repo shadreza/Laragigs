@@ -44,8 +44,11 @@ Route::post('/listings', [ListingController::class, 'store']);
 // if this route is kept above then /listings/create will be falling for this route and that will go to 404
 Route::get('/listings/{listing}', [ListingController::class, 'show']);
 
+// show edit form
+Route::get('/listings/{listing}/edit', [ListingController::class, 'edit']);
 
-
+// update form
+Route::put('/listings/{listing}', [ListingController::class, 'update']);
 
 
 
