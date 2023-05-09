@@ -40,15 +40,18 @@ Route::get('/listings/create', [ListingController::class, 'create']);
 // store listing
 Route::post('/listings', [ListingController::class, 'store']);
 
-// simple eloquent route model binding
-// if this route is kept above then /listings/create will be falling for this route and that will go to 404
-Route::get('/listings/{listing}', [ListingController::class, 'show']);
-
 // show edit form
 Route::get('/listings/{listing}/edit', [ListingController::class, 'edit']);
 
 // update form
 Route::put('/listings/{listing}', [ListingController::class, 'update']);
+
+// delete form
+Route::delete('/listings/{listing}', [ListingController::class, 'destroy']);
+
+// simple eloquent route model binding
+// if this route is kept above then /listings/create will be falling for this route and that will go to 404
+Route::get('/listings/{listing}', [ListingController::class, 'show']);
 
 
 
