@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use App\Models\Listing;
+use App\Models\User;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -15,6 +16,11 @@ class DatabaseSeeder extends Seeder
     {
         // \App\Models\User::factory(10)->create();
 
+        $user = User::factory()->create([
+            'name' => 'John Wick',
+            'email' => 'john@example.com',
+        ]);
+
         // Listing::create([
         //     'title' => 'Laravel Junior Developer',
         //     'tags' => 'laravel, js, ts',
@@ -25,6 +31,8 @@ class DatabaseSeeder extends Seeder
         //     'description' => 'lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem-ipsum-lorem',
         // ]);
 
-        Listing::factory(6)->create();
+        Listing::factory(6)->create([
+            'user_id' => $user['id']
+        ]);
     }
 }
