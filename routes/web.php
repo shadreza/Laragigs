@@ -50,6 +50,9 @@ Route::put('/listings/{listing}', [ListingController::class, 'update'])->middlew
 // delete form
 Route::delete('/listings/{listing}', [ListingController::class, 'destroy'])->middleware('auth');
 
+// manage listings
+Route::get('/listings/manage', [ListingController::class, 'manage'])->middleware('auth');
+
 // simple eloquent route model binding
 // if this route is kept above then /listings/create will be falling for this route and that will go to 404
 Route::get('/listings/{listing}', [ListingController::class, 'show']);
@@ -68,6 +71,7 @@ Route::get('/login', [UserController::class, 'login'])->name('login')->middlewar
 
 // login user
 Route::post('/users/authenticate', [UserController::class, 'authenticate']);
+
 
 // // get single listing
 // Route::get('/listings/{id}', function ($id) {
