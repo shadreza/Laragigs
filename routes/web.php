@@ -60,6 +60,9 @@ Route::get('/register', [UserController::class, 'create']);
 // create new user
 Route::post('/users', [UserController::class, 'store']);
 
+// log user out
+Route::post('/logout', [UserController::class, 'logout']);
+
 // // get single listing
 // Route::get('/listings/{id}', function ($id) {
 //     $listing = Listing::find($id);
