@@ -1,9 +1,10 @@
 <?php
 
-use App\Http\Controllers\ListingController;
+use App\Models\Listing;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Models\Listing;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\ListingController;
 
 /*
 |--------------------------------------------------------------------------
@@ -53,7 +54,11 @@ Route::delete('/listings/{listing}', [ListingController::class, 'destroy']);
 // if this route is kept above then /listings/create will be falling for this route and that will go to 404
 Route::get('/listings/{listing}', [ListingController::class, 'show']);
 
+// show register create form
+Route::get('/register', [UserController::class, 'create']);
 
+// create new user
+Route::post('/users', [UserController::class, 'store']);
 
 // // get single listing
 // Route::get('/listings/{id}', function ($id) {
