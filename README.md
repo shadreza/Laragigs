@@ -2,6 +2,10 @@
 
 **[the git link](https://github.com/shadreza/Laragigs)**
 
+## Demo
+
+**[Demo Video](https://drive.google.com/file/d/1C6bRNfwBd6Psi1KsujxAP7O-I0bn72vV/view?usp=share_link)**
+
 ## Naming conventions
 
 -   Common Resource Routes:
